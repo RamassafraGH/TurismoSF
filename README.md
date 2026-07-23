@@ -57,59 +57,62 @@ El proyecto sigue una arquitectura desacoplada basada en contenedores:
                │   PostgreSQL 16 DB     │
                │      (Port 5432)       │
                └────────────────────────┘
+```
 
 ---
 
 ## 🛠️ Requisitos Previos
 
-Asegúrate de contar con las siguientes herramientas instaladas en tu equipo antes de comenzar:
+Solo necesitás tener instalado:
 
-| Herramienta        | Versión Recomendada | Enlace de Descarga                                            |
-| ------------------ | ------------------- | ------------------------------------------------------------- |
-| **Git**            | 2.x o superior      | [git-scm.com](https://git-scm.com/)                           |
-| **Docker Desktop** | Última versión      | [docker.com](https://www.docker.com/products/docker-desktop/) |
-| **Node.js**        | 20.x LTS            | [nodejs.org](https://nodejs.org/)                             |
-| **VS Code**        | N/A                 | [code.visualstudio.com](https://code.visualstudio.com/)       |
+Docker Desktop (incluye Docker Compose)
+Windows/Mac: https://www.docker.com/products/docker-desktop/
+Linux: instalar docker y el plugin docker-compose-plugin según tu distro.
 
 ---
 
 ## 🚀 Guía de Instalación y Ejecución
 
-### 1. Clonar el Repositorio
-```
+1. Cloná el repositorio:
 
-```bash
-git clone https://github.com/RamassafraGH/TurismoSF.git
-cd TurismoSF
-```
+   ```bash
+   git clone https://github.com/RamassafraGH/TurismoSF.git
+   cd sicat-sf
+   ```
 
-### 2. Levantar Entorno con Docker (Base de Datos + Backend)
+2. Levantá todo el sistema con un solo comando:
 
-Asegúrate de tener **Docker Desktop iniciado** y ejecuta en la terminal de la raíz:
+   ```bash
+   docker compose up -d --build
+   ```
 
-```bash
-docker compose up --build
+   La primera vez puede tardar unos minutos (descarga imágenes base y compila el backend y el frontend).
 
-```
+3. Verificá que los tres servicios estén corriendo:
 
-- **Backend Spring Boot:** Se compilará y ejecutará en `http://localhost:8080`.
-- **PostgreSQL:** Iniciará en `localhost:5432` corriendo automáticamente el script inicial de `/db/init`.
+   ```bash
+   docker compose ps
+   ```
+
+   Deberías ver `sicat_db`, `sicat_backend` y `sicat_frontend`, todos con estado `Up`.
+
+4. Abrí la aplicación en el navegador:
+   ```
+   http://localhost:4200
+   ```
+
+## Puertos utilizados
+
+| Servicio | Puerto en tu PC | Descripción                                                         |
+| -------- | --------------- | ------------------------------------------------------------------- |
+| Frontend | 4200            | Aplicación Angular (Nginx)                                          |
+| Backend  | 8080            | API REST (Spring Boot)                                              |
+| Database | 5432            | PostgreSQL (accesible con DBeaver/pgAdmin si querés inspeccionarla) |
+
+Si alguno de estos puertos ya está ocupado en tu PC por otra aplicación, el `docker compose up` va a fallar con un error de "puerto en uso". Avisá al grupo para cambiar el mapeo en `docker-compose.yml`.
 
 > 💡 _Para ejecutar los contenedores en segundo plano y liberar la terminal, añade `-d`:_
 > `docker compose up --build -d`
-
-### 3. Levantar el Frontend (Angular)
-
-Abre una **segunda terminal**, dirígete al directorio del frontend e instala las dependencias:
-
-```bash
-cd frontend
-npm install
-npm start
-
-```
-
-La aplicación web estará disponible en `http://localhost:4200`.
 
 ---
 
