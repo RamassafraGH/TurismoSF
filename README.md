@@ -1,44 +1,50 @@
-# 🏛️ TurismoSF — SICAT (Sistema de Información Categórica de Turismo)
+````markdown
+<div align="center">
 
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![Java](https://img.shields.io/badge/Java-21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-19-DD0031?style=flat-square&logo=angular&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-LTS-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Git](https://img.shields.io/badge/Git-VCS-F05032?style=flat-square&logo=git&logoColor=white)
+# 🏛️ TurismoSF — SICAT
 
-> Plataforma web para la gestión, parametrización y consulta centralizada de categorías y recursos turísticos de la provincia de Santa Fe.
+### _Sistema de Información Categórica de Turismo de la Provincia de Santa Fe_
+
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Java 21](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
+[![Angular 19](https://img.shields.io/badge/Angular-19-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+
+Plataforma web integral para la gestión, parametrización y consulta centralizada de categorías y recursos turísticos.
+
+</div>
 
 ---
 
 ## 📋 Tabla de Contenidos
 
-1. Acerca del Proyecto
-2. Arquitectura del Sistema
-3. Requisitos Previos
-4. Guía de Instalación y Ejecución
-5. Estructura del Repositorio
-6. API Endpoints y Pruebas
-7. Guía de Contribución y Flujo de Trabajo
-8. Autores
+- [Acerca del Proyecto](#-acerca-del-proyecto)
+- [Arquitectura del Sistema](#-arquitectura-del-sistema)
+- [Requisitos Previos](#-requisitos-previos)
+- [Guía de Instalación y Ejecución](#-guía-de-instalación-y-ejecución)
+- [Puertos del Sistema](#-puertos-utilizados)
+- [Estructura del Repositorio](#-estructura-del-repositorio)
+- [API Endpoints y Pruebas](#-api-endpoints-y-pruebas)
+- [Flujo de Trabajo y Contribución](#-guía-de-contribución-y-flujo-de-trabajo)
+- [Autores](#%EF%B8%8F-autores)
 
 ---
 
-## Acerca del Proyecto
+## ℹ️ Acerca del Proyecto
 
-**TurismoSF** aborda la necesidad de digitalizar y administrar de forma ordenada los catálogos y clasificaciones turísticas de la provincia. La aplicación permite:
+**TurismoSF** aborda la necesidad de digitalizar y administrar de forma ordenada los catálogos y clasificaciones turísticas de la provincia de Santa Fe. La aplicación permite:
 
-- **Administración de Categorías:** Alta, modificación, baja y búsqueda parametrizada de categorías turísticas.
-- **Integración y Persistencia:** Manejo automatizado del esquema relacional en PostgreSQL.
-- **Consumo Dinámico:** Frontend reactivo construido en Angular para operar los datos de la API REST.
+- 🗂️ **Administración de Categorías:** Alta, modificación, baja y búsqueda parametrizada de categorías turísticas.
+- 💾 **Integración y Persistencia:** Manejo automatizado del esquema relacional en PostgreSQL.
+- ⚡ **Consumo Dinámico:** Frontend reactivo construido en Angular para operar los datos de la API REST.
 
 ---
 
 ## 🏗️ Arquitectura del Sistema
 
-El proyecto sigue una arquitectura desacoplada basada en contenedores:
+El proyecto sigue una arquitectura modular y desacoplada completamente orquestada mediante contenedores:
 
 ```text
                ┌────────────────────────┐
@@ -58,61 +64,67 @@ El proyecto sigue una arquitectura desacoplada basada en contenedores:
                │      (Port 5432)       │
                └────────────────────────┘
 ```
+````
 
 ---
 
 ## 🛠️ Requisitos Previos
 
-Solo necesitás tener instalado:
+Para ejecutar la aplicación completa solo necesitás tener instalado **Docker Desktop**:
 
-Docker Desktop (incluye Docker Compose)
-Windows/Mac: https://www.docker.com/products/docker-desktop/
-Linux: instalar docker y el plugin docker-compose-plugin según tu distro.
+- 🐋 **Windows / Mac:** Descargar e instalar [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+- 🐧 **Linux:** Instalar `docker` y el plugin `docker-compose-plugin` según tu distribución.
 
 ---
 
 ## 🚀 Guía de Instalación y Ejecución
 
-1. Cloná el repositorio:
+Sigue estos simples pasos para poner en marcha el proyecto localmente:
 
-   ```bash
-   git clone https://github.com/RamassafraGH/TurismoSF.git
-   cd sicat-sf
-   ```
+### 1. Clonar el repositorio
 
-2. Levantá todo el sistema con un solo comando:
+```bash
+git clone [https://github.com/RamassafraGH/TurismoSF.git](https://github.com/RamassafraGH/TurismoSF.git)
+cd TurismoSF
 
-   ```bash
-   docker compose up -d --build
-   ```
+```
 
-   La primera vez puede tardar unos minutos (descarga imágenes base y compila el backend y el frontend).
+### 2. Levantar todo el sistema
 
-3. Verificá que los tres servicios estén corriendo:
+Ejecutá el siguiente comando en la raíz del proyecto para construir y levantar todos los contenedores en segundo plano:
 
-   ```bash
-   docker compose ps
-   ```
+```bash
+docker compose up -d --build
 
-   Deberías ver `sicat_db`, `sicat_backend` y `sicat_frontend`, todos con estado `Up`.
+```
 
-4. Abrí la aplicación en el navegador:
-   ```
-   http://localhost:4200
-   ```
+> ⏳ _La primera vez puede demorar un par de minutos mientras se descargan las imágenes base y se compilan tanto el backend como el frontend._
 
-## Puertos utilizados
+### 3. Verificar el estado de los servicios
 
-| Servicio | Puerto en tu PC | Descripción                                                         |
-| -------- | --------------- | ------------------------------------------------------------------- |
-| Frontend | 4200            | Aplicación Angular (Nginx)                                          |
-| Backend  | 8080            | API REST (Spring Boot)                                              |
-| Database | 5432            | PostgreSQL (accesible con DBeaver/pgAdmin si querés inspeccionarla) |
+```bash
+docker compose ps
 
-Si alguno de estos puertos ya está ocupado en tu PC por otra aplicación, el `docker compose up` va a fallar con un error de "puerto en uso". Avisá al grupo para cambiar el mapeo en `docker-compose.yml`.
+```
 
-> 💡 _Para ejecutar los contenedores en segundo plano y liberar la terminal, añade `-d`:_
-> `docker compose up --build -d`
+Deberías ver los tres contenedores (`sicat_db`, `sicat_backend` y `sicat_frontend`) con estado **`Up`**.
+
+### 4. Acceder a la aplicación
+
+Abre tu navegador e ingresa a: **`http://localhost:4200`**
+
+---
+
+## 🌐 Puertos Utilizados
+
+| Servicio     | Puerto Local | Tecnología      | Descripción                     |
+| ------------ | ------------ | --------------- | ------------------------------- |
+| **Frontend** | `4200`       | Angular / Nginx | Interfaz web de usuario         |
+| **Backend**  | `8080`       | Spring Boot     | API RESTful y lógica de negocio |
+| **Database** | `5432`       | PostgreSQL      | Base de datos relacional        |
+
+> [!WARNING]
+> Si alguno de estos puertos ya está en uso en tu PC por otra aplicación, `docker compose up` fallará con un error de conflicto de puertos. Avisa al grupo para ajustar el mapeo en `docker-compose.yml`.
 
 ---
 
@@ -120,18 +132,18 @@ Si alguno de estos puertos ya está ocupado en tu PC por otra aplicación, el `d
 
 ```text
 TurismoSF/
-├── backend/                  # Proyecto Spring Boot (Java 21)
-│   ├── src/                  # Código fuente (Controllers, Services, Models)
-│   ├── .mvn/                 # Wrapper de Maven
-│   ├── Dockerfile            # Configuración para la imagen Docker del Backend
-│   └── pom.xml               # Dependencias de Maven
-├── db/                       # Scripts SQL y persistencia
-│   └── init/                 # Scripts .sql de creación de tablas e inserts iniciales
-├── frontend/                 # Proyecto Angular
-│   ├── src/                  # Componentes, servicios y assets
-│   └── package.json          # Dependencias de Node.js
-├── docker-compose.yml        # Orquestador multi-contenedor
-└── README.md                 # Documentación del proyecto
+├── 📁 backend/                  # Proyecto Spring Boot (Java 21)
+│   ├── 📁 src/                  # Controllers, Services, Repositories, Models
+│   ├── 📁 .mvn/                 # Wrapper de Maven
+│   ├── 📄 Dockerfile            # Configuración Docker para el Backend
+│   └── 📄 pom.xml               # Gestor de dependencias Maven
+├── 📁 db/                       # Scripts SQL y persistencia
+│   └── 📁 init/                 # DDL/DML de creación de tablas e inserts iniciales
+├── 📁 frontend/                 # Aplicación web en Angular 19
+│   ├── 📁 src/                  # Componentes, servicios, guardias y assets
+│   └── 📄 package.json          # Dependencias y scripts de Node
+├── 📄 docker-compose.yml        # Orquestación de contenedores Docker
+└── 📄 README.md                 # Documentación del proyecto
 
 ```
 
@@ -139,23 +151,23 @@ TurismoSF/
 
 ## 🧪 API Endpoints y Pruebas
 
-Para probar las rutas de la API backend sin necesidad del frontend, puedes utilizar el archivo de pruebas HTTP incluido o importar la colección en herramientas como Postman.
+Para probar las rutas de la API backend sin necesidad del frontend, puedes utilizar el archivo de pruebas HTTP incluido en el proyecto o importarlas en Postman / Insomnia.
 
 ### Endpoints principales de Categorías (`/api/categorias`):
 
-| Método   | Endpoint               | Descripción                       |
-| -------- | ---------------------- | --------------------------------- |
-| `GET`    | `/api/categorias`      | Lista todas las categorías        |
-| `GET`    | `/api/categorias/{id}` | Busca una categoría por ID        |
-| `POST`   | `/api/categorias`      | Crea una nueva categoría          |
-| `PUT`    | `/api/categorias/{id}` | Actualiza una categoría existente |
-| `DELETE` | `/api/categorias/{id}` | Elimina una categoría             |
+| Método | Endpoint               | Descripción                                |
+| ------ | ---------------------- | ------------------------------------------ |
+| GET    | `/api/categorias`      | Obtener el listado de todas las categorías |
+| GET    | `/api/categorias/{id}` | Buscar una categoría específica por su ID  |
+| POST   | `/api/categorias`      | Crear una nueva categoría                  |
+| PUT    | `/api/categorias/{id}` | Actualizar una categoría existente         |
+| DELETE | `/api/categorias/{id}` | Eliminar una categoría                     |
 
 ---
 
 ## 🤝 Guía de Contribución y Flujo de Trabajo
 
-Para mantener el código ordenado entre todos los integrantes del equipo:
+Para mantener el historial limpio y ordenado entre todos los integrantes del equipo:
 
 1. **Crear una rama para la tarea:**
 
@@ -164,14 +176,14 @@ git checkout -b feature/nombre-de-la-tarea
 
 ```
 
-2. **Realizar commits claros:**
+2. **Realizar commits con mensajes claros:**
 
 ```bash
 git commit -m "feat: agregar validación en creación de categorías"
 
 ```
 
-3. **Subir los cambios y abrir Pull Request (PR):**
+3. **Subir la rama y abrir un Pull Request (PR):**
 
 ```bash
 git push origin feature/nombre-de-la-tarea
@@ -182,5 +194,9 @@ git push origin feature/nombre-de-la-tarea
 
 ## ✒️ Autores
 
-- [RamassafraGH](https://www.google.com/search?q=https://github.com/RamassafraGH)
-- _Equipo de Desarrollo - Proyecto TurismoSF_
+- **Ramiro Saffra** — [RamassafraGH](https://github.com/RamassafraGH)
+- _Equipo de Desarrollo — Proyecto TurismoSF_
+
+```
+
+```
