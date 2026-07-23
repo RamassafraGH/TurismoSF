@@ -26,7 +26,7 @@
 
 ---
 
-## ℹ️ Acerca del Proyecto
+## Acerca del Proyecto
 
 **TurismoSF** aborda la necesidad de digitalizar y administrar de forma ordenada los catálogos y clasificaciones turísticas de la provincia. La aplicación permite:
 
@@ -184,10 +184,6 @@ git push origin feature/nombre-de-la-tarea
 
 - [RamassafraGH](https://www.google.com/search?q=https://github.com/RamassafraGH)
 - _Equipo de Desarrollo - Proyecto TurismoSF_
-
-```
-
-```
 
 ```
 
