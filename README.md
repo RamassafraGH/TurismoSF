@@ -1,12 +1,13 @@
-````markdown
 # 🏛️ TurismoSF — SICAT (Sistema de Información Categórica de Turismo)
 
-![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-green?style=flat-square&logo=springboot)
-![Java](https://img.shields.io/badge/Java-21-orange?style=flat-square&logo=openjdk)
-![Angular](https://img.shields.io/badge/Angular-19-red?style=flat-square&logo=angular)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?style=flat-square&logo=postgresql)
-![Docker](https://img.shields.io/badge/Docker-Enabled-blue?style=flat-square&logo=docker)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Java](https://img.shields.io/badge/Java-21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-19-DD0031?style=flat-square&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-LTS-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Git](https://img.shields.io/badge/Git-VCS-F05032?style=flat-square&logo=git&logoColor=white)
 
 > Plataforma web para la gestión, parametrización y consulta centralizada de categorías y recursos turísticos de la provincia de Santa Fe.
 
@@ -14,14 +15,14 @@
 
 ## 📋 Tabla de Contenidos
 
-1. [Acerca del Proyecto](#-acerca-del-proyecto)
-2. [Arquitectura del Sistema](#-arquitectura-del-sistema)
-3. [Requisitos Previos](#-requisitos-previos)
-4. [Guía de Instalación y Ejecución](#-guía-de-instalación-y-ejecución)
-5. [Estructura del Repositorio](#-estructura-del-repositorio)
-6. [API Endpoints y Pruebas](#-api-endpoints-y-pruebas)
-7. [Guía de Contribución y Flujo de Trabajo](#-guía-de-contribución-y-flujo-de-trabajo)
-8. [Autores](#-autores)
+1. Acerca del Proyecto
+2. Arquitectura del Sistema
+3. Requisitos Previos
+4. Guía de Instalación y Ejecución
+5. Estructura del Repositorio
+6. API Endpoints y Pruebas
+7. Guía de Contribución y Flujo de Trabajo
+8. Autores
 
 ---
 
@@ -37,9 +38,9 @@
 
 ## 🏗️ Arquitectura del Sistema
 
-El proyecto sigue una arquitectura desacoplada basada en microservicios/contenedores:
+El proyecto sigue una arquitectura desacoplada basada en contenedores:
 
-```text
+````text
                ┌────────────────────────┐
                │    Cliente / Web       │
                │   Angular (Port 4200)  │
@@ -56,8 +57,6 @@ El proyecto sigue una arquitectura desacoplada basada en microservicios/contened
                │   PostgreSQL 16 DB     │
                │      (Port 5432)       │
                └────────────────────────┘
-```
-````
 
 ---
 
@@ -82,7 +81,7 @@ Asegúrate de contar con las siguientes herramientas instaladas en tu equipo ant
 git clone [https://github.com/RamassafraGH/TurismoSF.git](https://github.com/RamassafraGH/TurismoSF.git)
 cd TurismoSF
 
-```
+````
 
 ### 2. Levantar Entorno con Docker (Base de Datos + Backend)
 
@@ -182,6 +181,10 @@ git push origin feature/nombre-de-la-tarea
 
 - [RamassafraGH](https://www.google.com/search?q=https://github.com/RamassafraGH)
 - _Equipo de Desarrollo - Proyecto TurismoSF_
+
+```
+
+```
 
 ```
 
