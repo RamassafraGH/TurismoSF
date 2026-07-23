@@ -184,7 +184,3 @@ git push origin feature/nombre-de-la-tarea
 
 - [RamassafraGH](https://www.google.com/search?q=https://github.com/RamassafraGH)
 - _Equipo de Desarrollo - Proyecto TurismoSF_
-
-```
-
-```
