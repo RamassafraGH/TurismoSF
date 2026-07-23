@@ -40,7 +40,7 @@
 
 El proyecto sigue una arquitectura desacoplada basada en contenedores:
 
-````text
+```text
                ┌────────────────────────┐
                │    Cliente / Web       │
                │   Angular (Port 4200)  │
@@ -68,7 +68,7 @@ Asegúrate de contar con las siguientes herramientas instaladas en tu equipo ant
 | ------------------ | ------------------- | ------------------------------------------------------------- |
 | **Git**            | 2.x o superior      | [git-scm.com](https://git-scm.com/)                           |
 | **Docker Desktop** | Última versión      | [docker.com](https://www.docker.com/products/docker-desktop/) |
-| **Node.js**        | 18.x o 20.x LTS     | [nodejs.org](https://nodejs.org/)                             |
+| **Node.js**        | 20.x LTS            | [nodejs.org](https://nodejs.org/)                             |
 | **VS Code**        | N/A                 | [code.visualstudio.com](https://code.visualstudio.com/)       |
 
 ---
@@ -76,12 +76,12 @@ Asegúrate de contar con las siguientes herramientas instaladas en tu equipo ant
 ## 🚀 Guía de Instalación y Ejecución
 
 ### 1. Clonar el Repositorio
+```
 
 ```bash
-git clone [https://github.com/RamassafraGH/TurismoSF.git](https://github.com/RamassafraGH/TurismoSF.git)
+git clone https://github.com/RamassafraGH/TurismoSF.git
 cd TurismoSF
-
-````
+```
 
 ### 2. Levantar Entorno con Docker (Base de Datos + Backend)
 
